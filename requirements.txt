@@ -1,0 +1,7 @@
+vertexai
+pydantic
+instructor
+openai
+python-dotenv
+logging
+PyYAML

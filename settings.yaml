@@ -1,0 +1,18 @@
+tool_settings:
+  service_priority: # Priority list for services to use (from top to bottom), if you don't want to use a service, remove it from the list, Availiable services:"openai", "vertexai"
+    - "openai"
+    - "vertexai"
+  verbosity: "INFO"  # Verbosity of the logger, MUST be one of "DEBUG", "INFO", "WARNING", "ERROR", "CRITICAL"
+
+openai:  # Parameters for message generation for the openAI client
+  base_url: "https://openrouter.ai/api/v1" # URL endpoint for openAI compatible service, leave blank to use "OPEN"AI's services
+  client_args:
+    model: "anthropic/claude-3.5-sonnet:beta"  # model to be used for generation
+    temperature: 0.1  # Temperature for the model, recommended value: <0.2
+
+vertexai:
+  model: "gemini-1.5-flash-002"  # Model name for vertexAI
+  location: "asia-east2"  # Location for inference
+  gen_config: # Generation configuration for vertexai, see (availiable arguments)[https://cloud.google.com/vertex-ai/docs/reference/rest/v1/GenerationConfig]
+    temperature: 0.1  # Temperature for the model
+    # topP: 0.5 #
